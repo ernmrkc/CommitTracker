@@ -1,8 +1,8 @@
-Geliştirici Ekranı:
+Developer Screen:
 localhost:8080/developers/id:{id}
 
-Commit Listesi Ekranı:
+Commit List Screen:
 localhost:8080/commits/all
 
-Commit Detayı Ekranı:
+Commit Details Screen:
 localhost:8080/commits/id:{id}
