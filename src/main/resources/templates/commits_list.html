@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Commits Listesi</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Commit Listesi</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Hash</th>
+        <th>Tarih-Saat</th>
+        <th>Mesaj</th>
+        <th>Geliştirici</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="commit : ${commitList}">
+        <td th:text="${commit.hash}"></td>
+        <td th:text="${commit.timestamp}"></td>
+        <td th:text="${commit.message}"></td>
+        <td th:text="${commit.developer.githubUsername}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
